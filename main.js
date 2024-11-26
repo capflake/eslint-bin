@@ -1,6 +1,8 @@
+/* eslint-disable import/no-commonjs */
 const { ESLint } = require("eslint");
 const minimist = require("minimist");
 const format = require("./node_modules/eslint/lib/cli-engine/formatters/stylish.js");
+/* eslint-enable import/no-commonjs */
 
 (async function main() {
   const config = {
@@ -168,7 +170,7 @@ const format = require("./node_modules/eslint/lib/cli-engine/formatters/stylish.
   const argv = minimist(process.argv.slice(2));
 
   const options = {
-    allowInlineConfig: false,
+    allowInlineConfig: true,
     overrideConfig: config,
   };
 

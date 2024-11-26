@@ -2,6 +2,9 @@
 
 set -ex
 
+# Prepare the output folder
+mkdir -p out
+
 # Prepare source files.
 esbuild main.js --bundle --platform=node --outfile=out/eslint-src.js
 

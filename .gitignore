@@ -98,5 +98,4 @@ typings/
 .vite/
 
 # Output.
-out/*
-!out/.placeholder
+out/
