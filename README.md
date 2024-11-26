@@ -21,11 +21,14 @@ npm run build
 
 ## Release
 
+Build the project first.
+
 Create a new tag:
 
 ```shell
 git tag -a v0.1.0 -m "Release v0.1.0"
+git push --tags
 ```
 
-Create release on GitHub and upload the binaries, see example:
+Create release on GitHub and upload the binaries from `out/`, see example:
 https://github.com/capflake/eslint-bin/releases/tag/v0.1.0.
