@@ -1,0 +1,25 @@
+{
+  "name": "eslint-bin",
+  "version": "0.0.0",
+  "author": {
+    "name": "Capflake",
+    "email": "legal@capflake.com"
+  },
+  "type": "commonjs",
+  "main": "./main.js",
+  "bin": "./main.js",
+  "private": true,
+  "scripts": {
+    "build": "esbuild main.js --bundle --platform=node --outfile=out/eslint-src.js && pkg -t node20-macos-arm64,node20-macos-x64,node20-linux-arm64,node20-linux-x64 out/eslint-src.js -o out/eslint"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.1.1",
+    "esbuild": "^0.24.0"
+  },
+  "dependencies": {
+    "eslint": "^8.57.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.34.1",
+    "minimist": "^1.2.8"
+  }
+}
